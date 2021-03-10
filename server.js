@@ -5,10 +5,10 @@ const app = express();
 const path = require("path");
 
 // simple approach; not the most robust
-// app.use(express.static("./public"));
+app.use(express.static("./public"));
 
 // preferred approach
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function(request, response){
   // console.log(request);
